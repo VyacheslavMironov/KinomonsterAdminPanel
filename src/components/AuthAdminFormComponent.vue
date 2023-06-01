@@ -59,7 +59,7 @@
                 localStorage.setItem("user_email", this.email)
                 if (localStorage.getItem("user_email"))
                 {
-                    window.href = "/"
+                    window.location.href = "/"
                 }
             },
             sendForm: function()
