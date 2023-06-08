@@ -6,10 +6,16 @@
             <div class="row">
                 <div class="col-10"></div>
                 <div class="col-2">
-                    <a href="#" class="btn btn-success">Добавить фильм</a>
+                    <router-link
+                        to="/create/movie"
+                        class="btn btn-success"
+                        aria-current="page"
+                    >
+                        Добавить фильм
+                    </router-link>
                 </div>
             </div>
-            <div class="mb-2">
+            <div class="mt-4 mb-2">
                 <table class="table">
                     <thead>
                         <tr>
@@ -21,12 +27,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Аватар</td>
-                            <td>10.2</td>
-                            <td>1985</td>
-                            <td>Михалков Н.С</td>
-                            <td>Детектив</td>
+                        <tr
+                            v-for="el in list"
+                            v-bind:key="el"
+                        >
+                            <td>{{ el.name }}</td>
+                            <td>{{ el.rating }}</td>
+                            <td>{{ el.year }}</td>
+                            <td>{{ el.director }}</td>
+                            <td>{{ el.genre }}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -44,7 +53,50 @@
         data()
         {
             return {
-
+                list: [
+                    {
+                        name: "Фильм года с женщиной", 
+                        rating: 3.14,
+                        year: '1985',
+                        genre: "Ужасы",
+                        director: "Михалков Н.С"
+                    },
+                    {
+                        name: "Фильм года с женщиной", 
+                        rating: 3.14,
+                        year: '1985',
+                        genre: "Ужасы",
+                        director: "Михалков Н.С"
+                    },
+                    {
+                        name: "Фильм года с женщиной", 
+                        rating: 3.14,
+                        year: '1985',
+                        genre: "Ужасы",
+                        director: "Михалков Н.С"
+                    },
+                    {
+                        name: "Фильм года с женщиной", 
+                        rating: 3.14,
+                        year: '1985',
+                        genre: "Ужасы",
+                        director: "Михалков Н.С"
+                    },
+                    {
+                        name: "Фильм года с женщиной", 
+                        rating: 3.14,
+                        year: '1985',
+                        genre: "Ужасы",
+                        director: "Михалков Н.С"
+                    },
+                    {
+                        name: "Фильм года с женщиной", 
+                        rating: 3.14,
+                        year: '1985',
+                        genre: "Ужасы",
+                        director: "Михалков Н.С"
+                    }
+                ]
             }
         },
         methods: {
@@ -61,6 +113,23 @@
                         }]
                     },
                     options: {
+                        plugins: {
+                            legend: {
+                                display: true,
+                                labels: {
+                                    color: 'rgb(0, 0, 0)'
+                                }
+                            }
+                        },
+                        animations: {
+                            tension: {
+                                duration: 1000,
+                                easing: 'linear',
+                                from: 1,
+                                to: 0,
+                                loop: true
+                            }
+                        },
                         onClick: (e) => {
                         const canvasPosition = getRelativePosition(e, chart);
 

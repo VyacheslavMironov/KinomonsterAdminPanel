@@ -2,6 +2,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-6 mx-auto">
+                <div class="col-21">
+                    <h3 class="mb-4">Добавить фильм</h3>
+                </div>
                 <form>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Введите название фильма</label>
@@ -15,8 +18,18 @@
                         <label for="exampleInputEmail1" class="form-label">Укажите обложку фильма</label>
                         <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
+
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Введите htqnbyu фильма</label>
+                        <label for="exampleInputEmail1" class="form-label">Год выпуска фильма</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Имя режисёра</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Введите рейтинг фильма</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-4">
